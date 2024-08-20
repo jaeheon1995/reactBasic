@@ -1,0 +1,18 @@
+.table {
+    width: 300px;
+}
+
+.th {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tr{
+    display: flex;
+}
+
+.td{
+    display: flex;
+    flex:1;
+    text-align: center;
+}
