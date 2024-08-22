@@ -7,6 +7,7 @@ import ConditionmalRender from './component_manage/ConditionmalRender';
 import Example2 from './component_manage/example/Example2';
 import ListRender from './component_manage/ListRender';
 import EventComponent from './interraction/EventComponent';
+import StateComponent from './interraction/StateComponent';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <ConditionmalRender /> */}
       {/* <Example2 /> */}
       {/* <ListRender /> */}
-      <EventComponent/>
+      {/* <EventComponent/> */}
+    <StateComponent/>
     </>
   );
 }
