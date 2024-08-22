@@ -6,6 +6,7 @@ import Properties from './component_manage/Properties';
 import ConditionmalRender from './component_manage/ConditionmalRender';
 import Example2 from './component_manage/example/Example2';
 import ListRender from './component_manage/ListRender';
+import EventComponent from './interraction/EventComponent';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       {/* <CurlyBraces /> */}
       {/* <Properties /> */}
       {/* <ConditionmalRender /> */}
-      <Example2 />
+      {/* <Example2 /> */}
       {/* <ListRender /> */}
+      <EventComponent/>
     </>
   );
 }
