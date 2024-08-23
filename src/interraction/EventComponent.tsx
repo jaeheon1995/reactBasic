@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, MouseEvent } from 'react'
+import { ChangeEvent, KeyboardEvent, MouseEvent } from 'react';
 
 // 이벤트 처리:
 // - 웹 페이지(컴포넌트)가 사용자와의 상호작용을 받아드려 그것에 대한 처리를 하는 것
@@ -41,6 +41,7 @@ export default function EventComponent() {
 
     let count= 0;
     const onIncrease =()=>{
+
         count++;
         console.log(count);
     };
