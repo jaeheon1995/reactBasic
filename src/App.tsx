@@ -1,5 +1,5 @@
 import './App.css';
-import PowordingComponent from './interraction/PowordingComponent';
+import CustomHook from './hook/CustomHook';
 
 function App() {
   return (
@@ -13,7 +13,10 @@ function App() {
       {/* <ListRender /> */}
       {/* <EventComponent/> */}
     {/* <StateComponent/> */}
-      <PowordingComponent />
+      {/* <PowordingComponent /> */}
+    {/* <HookComponent1/> */}
+    {/* <HookComponent2 /> */}
+    <CustomHook/>
     </>
   );
 }
