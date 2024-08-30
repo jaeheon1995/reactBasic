@@ -5,6 +5,7 @@ import CurlyBraces from './component/CurlyBraces';
 import PathMove from './router/PathMove';
 import Pathvariable from './router/Pathvariable';
 import QueryString from './router/QueryString';
+import Zustand from './zustand/Zustand';
 
 // react-router 패키지:
 // - react의 SPA(Single Page Application)에서 라우팅을 구현하기 위한 라이브러리
@@ -28,51 +29,52 @@ import QueryString from './router/QueryString';
 
 function Layout() {
 
-  // useLocation : 
-  // - 현재 경로에 대한 객체를 반환하는 react-router 훅 함수
-  // - pathname : 현재 path
-  const { pathname } = useLocation();
+    // useLocation : 
+    // - 현재 경로에 대한 객체를 반환하는 react-router 훅 함수
+    // - pathname : 현재 path
+    const { pathname } = useLocation();
 
-  // <Outlet> : 부모 <Route>에 해당 컴포넌트가 element로 등록되었을때
-  //            자식 <Route>의 element가 해당 위치에 렌더링되도록 하는 컴포넌트
+    // <Outlet> : 부모 <Route>에 해당 컴포넌트가 element로 등록되었을때
+    //            자식 <Route>의 element가 해당 위치에 렌더링되도록 하는 컴포넌트
 
-  return (
-      <div>
-          <div style={{ height: '100px', backgroundColor: 'red' }}>{pathname}</div>
-          <Outlet />
-          <div style={{ height: '100px', backgroundColor: 'blue' }}></div>
-      </div>
-  )
+    return (
+        <div>
+            <div style={{ height: '100px', backgroundColor: 'red' }}>{pathname}</div>
+            <Outlet />
+            <div style={{ height: '100px', backgroundColor: 'blue' }}></div>
+        </div>
+    )
 }
 
 function App() {
-  return (
-      <Routes>
-          <Route index element={<h1>기본 페이지</h1>} />
-          <Route path='/component' element={<Layout />}>
-              <Route index element={<Component />} />
-              <Route path='function-component' element={<FunctionComponent />} />
-              <Route path='curly-braces' element={<CurlyBraces />} />
-          </Route>
-          <Route path='/router'>
-              <Route path='query-string' element={<QueryString />} />
-              <Route path='path-variable/:name' element={<Pathvariable />} />
-              <Route path='path-move' element={<PathMove />} />
-          </Route>
-          <Route path='*' element={<h1>404!!!</h1>} />
-          
-          {/* <Properties /> */}
-          {/* <ConditionalRender /> */}
-          {/* <Example2 /> */}
-          {/* <ListRender /> */}
-          {/* <EventComponent /> */}
-          {/* <StateComponent /> */}
-          {/* <ForwordingComponent /> */}
-          {/* <HookComponent1 /> */}
-          {/* <HookComponent2 /> */}
-          {/* <CustomHook /> */}
-      </Routes>
-  );
+    return (
+        <Routes>
+            <Route index element={<h1>기본 페이지</h1>} />
+            <Route path='/component' element={<Layout />}>
+                <Route index element={<Component />} />
+                <Route path='function-component' element={<FunctionComponent />} />
+                <Route path='curly-braces' element={<CurlyBraces />} />
+            </Route>
+            <Route path='/router'>
+                <Route path='query-string' element={<QueryString />} />
+                <Route path='path-variable/:name' element={<Pathvariable />} />
+                <Route path='path-move' element={<PathMove />} />
+            </Route>
+            <Route path='/Zustand' element={<Zustand />}/>
+            <Route path='*' element={<h1>404!!!</h1>} />
+
+            {/* <Properties /> */}
+            {/* <ConditionalRender /> */}
+            {/* <Example2 /> */}
+            {/* <ListRender /> */}
+            {/* <EventComponent /> */}
+            {/* <StateComponent /> */}
+            {/* <ForwordingComponent /> */}
+            {/* <HookComponent1 /> */}
+            {/* <HookComponent2 /> */}
+            {/* <CustomHook /> */}
+        </Routes>
+    );
 }
 
 export default App;
