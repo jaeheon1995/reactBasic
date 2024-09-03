@@ -1,7 +1,9 @@
 import { Outlet, Route, Routes, useLocation } from 'react-router';
 import './App.css';
+import Axios from './axios/Axios';
 import Component, { FunctionComponent } from './component/Component';
 import CurlyBraces from './component/CurlyBraces';
+import ReactCookie from './react-cookie/ReactCookie';
 import PathMove from './router/PathMove';
 import Pathvariable from './router/Pathvariable';
 import QueryString from './router/QueryString';
@@ -61,6 +63,8 @@ function App() {
                 <Route path='path-move' element={<PathMove />} />
             </Route>
             <Route path='/Zustand' element={<Zustand />}/>
+            <Route path='/react-cookie' element={<ReactCookie />}/>
+            <Route path='/axios'element={<Axios/>}/>
             <Route path='*' element={<h1>404!!!</h1>} />
 
             {/* <Properties /> */}
